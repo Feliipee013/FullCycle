@@ -1,15 +1,30 @@
 package br.com.primeshoes.api.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.com.primeshoes.api.entites.Product;
 import br.com.primeshoes.api.repository.ProductRepository;
 
+@Service
 public class ProductService {
+	
 	@Autowired
 	private ProductRepository productRepository;
 	
-	public void store(Product product) {
-		productRepository.save(product);
+	/**
+	 * Save new product
+	 * @param product
+	 */
+	public Product store(Product product) 
+	{
+		return productRepository.save(product);
+	}
+	
+	public List<Product> getAll() 
+	{
+		return productRepository.findAll();
 	}
 }

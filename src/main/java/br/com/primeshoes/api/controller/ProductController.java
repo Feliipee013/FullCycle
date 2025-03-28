@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.primeshoes.api.dtos.ProductDTO;
 import br.com.primeshoes.api.entites.Product;
+import br.com.primeshoes.api.mappers.ProductMapper;
 import br.com.primeshoes.api.service.ProductService;
 
 @RestController
@@ -22,9 +24,10 @@ public class ProductController {
 	ProductService productService;
 	
 	@PostMapping
-	public ResponseEntity<Product> createProduct(@RequestBody Product product)
+	public ResponseEntity<ProductDTO> createProduct(@RequestBody ProductDTO productDTO)
 	{
-		return new ResponseEntity<>(productService.store(product), HttpStatus.CREATED);
+		ProductDTO productResponseDTO = ProductMapper.toDTO(productService.store(productDTO));
+		return new ResponseEntity<>(productResponseDTO, HttpStatus.CREATED);
 	}
 	
 	@GetMapping

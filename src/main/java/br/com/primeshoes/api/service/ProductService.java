@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.primeshoes.api.dtos.ProductDTO;
+import br.com.primeshoes.api.dtos.ProductCreateDTO;
 import br.com.primeshoes.api.entites.Product;
 import br.com.primeshoes.api.mappers.ProductMapper;
 import br.com.primeshoes.api.repository.ProductRepository;
@@ -20,9 +20,9 @@ public class ProductService {
 	 * Save new product
 	 * @param product
 	 */
-	public Product store(ProductDTO productDTO) 
+	public Product store(ProductCreateDTO productCreateDTO) 
 	{
-		Product product = ProductMapper.toEntity(productDTO);
+		Product product = ProductMapper.toEntity(productCreateDTO);
 		return productRepository.save(product);
 	}
 	

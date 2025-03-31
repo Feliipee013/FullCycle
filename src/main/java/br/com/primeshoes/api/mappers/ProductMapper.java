@@ -11,7 +11,6 @@ public class ProductMapper {
 		Product product = new Product();
 		product.setName(productDTO.name());
 		product.setPrice(productDTO.price());
-		product.setStock(productDTO.stock());
 		return product;
 	}
 }

@@ -23,7 +23,7 @@ public class Order {
 	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
-	User user;
+	private User user;
 	
 	private float totalPrice;
 	@Enumerated(EnumType.STRING)

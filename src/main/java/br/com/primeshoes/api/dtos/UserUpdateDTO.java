@@ -7,6 +7,4 @@ public record UserUpdateDTO(
 		String name,
 		String email,
 		String password,
-		Role role) {
-	
-}
+		Role role) {}

@@ -60,7 +60,7 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/{id_user}")
-	public ResponseEntity<String> desstroy(@PathVariable long id_user) {
+	public ResponseEntity<String> destroy(@PathVariable long id_user) {
 		try {
 			userService.destroy(id_user);
 			return new ResponseEntity("Usuário deletado com sucesso", HttpStatus.OK);

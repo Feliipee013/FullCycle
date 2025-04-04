@@ -2,11 +2,12 @@ package br.com.primeshoes.api.dtos;
 
 import br.com.primeshoes.api.entites.User;
 import br.com.primeshoes.api.enums.OrderStatus;
+import br.com.primeshoes.api.enums.PaymentMethod;
 
 public record OrderCreateDTO(
 		User user,
 		float totalPrice,
 		OrderStatus status,
-		String paymentMethod
-		//String trackingCode
+		PaymentMethod paymentMethod,
+		String trackingCode
 		) {}

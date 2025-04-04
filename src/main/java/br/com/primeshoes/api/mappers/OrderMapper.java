@@ -17,7 +17,8 @@ public class OrderMapper {
 		order.setTotalPrice(orderCreateDTO.totalPrice());
 		order.setStatus(orderCreateDTO.status());
 		order.setPaymentMethod(orderCreateDTO.paymentMethod());
-		//order.setTrackingCode(orderCreateDTO.trackingCode());
+		order.setTrackingCode(orderCreateDTO.trackingCode());
+		
 		return order;
 	}
 }

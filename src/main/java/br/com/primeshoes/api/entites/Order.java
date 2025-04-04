@@ -3,6 +3,7 @@ package br.com.primeshoes.api.entites;
 import java.sql.Date;
 
 import br.com.primeshoes.api.enums.OrderStatus;
+import br.com.primeshoes.api.enums.PaymentMethod;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -29,7 +30,7 @@ public class Order {
 	@Enumerated(EnumType.STRING)
 	private OrderStatus status;
 	
-	private String paymentMethod;
+	private PaymentMethod paymentMethod;
 	private String trackingCode;
 	private Date created_at;
 	private Date updated_at;
@@ -37,7 +38,7 @@ public class Order {
 	public Order() {
 	}
 
-	public Order(long id, User user, float totalPrice, OrderStatus status, String paymentMethod, String trackingCode,
+	public Order(long id, User user, float totalPrice, OrderStatus status, PaymentMethod paymentMethod, String trackingCode,
 			Date created_at, Date updated_at) {
 		super();
 		this.id = id;
@@ -82,11 +83,11 @@ public class Order {
 		this.status = status;
 	}
 
-	public String getPaymentMethod() {
+	public PaymentMethod getPaymentMethod() {
 		return paymentMethod;
 	}
 
-	public void setPaymentMethod(String paymentMethod) {
+	public void setPaymentMethod(PaymentMethod paymentMethod) {
 		this.paymentMethod = paymentMethod;
 	}
 

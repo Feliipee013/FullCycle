@@ -43,6 +43,7 @@ public class OrderService {
 		order.setTotalPrice(orderUpdateDTO.totalPrice());
 		order.setStatus(orderUpdateDTO.status());
 		order.setPaymentMethod(orderUpdateDTO.paymentMethod());
+		order.setTrackingCode(orderUpdateDTO.trackingCode());
 		
 		return OrderMapper.toDTO(order);
 	}

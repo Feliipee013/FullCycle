@@ -33,13 +33,13 @@ public class OrderController {
 	
 	@GetMapping
 	public ResponseEntity<List<OrderResponseDTO>> list() {
-		return new ResponseEntity(orderService.list(), HttpStatus.OK);
+		return new ResponseEntity<>(orderService.list(), HttpStatus.OK);
 	}
 	
 	@GetMapping("/{id_order}")
 	public ResponseEntity<OrderResponseDTO> show(@PathVariable long id_order) {
 		try {
-			return new ResponseEntity(orderService.show(id_order), HttpStatus.OK);
+			return new ResponseEntity<>(orderService.show(id_order), HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
@@ -48,7 +48,7 @@ public class OrderController {
 	@PatchMapping
 	public ResponseEntity<OrderResponseDTO> update(@RequestBody OrderUpdateDTO orderUpdateDTO) {
 		try {
-			return new ResponseEntity(orderService.update(orderUpdateDTO), HttpStatus.OK);
+			return new ResponseEntity<>(orderService.update(orderUpdateDTO), HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
@@ -58,9 +58,9 @@ public class OrderController {
 	public ResponseEntity<String> destroy(@PathVariable long id_order) {
 		try {
 			orderService.destroy(id_order);
-			return new ResponseEntity("Pedido deletado com sucesso", HttpStatus.OK);
+			return new ResponseEntity<>("Pedido deletado com sucesso", HttpStatus.OK);
 		} catch (Exception e) {
-			return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
 	}
 }

@@ -1,6 +1,6 @@
-package br.com.primeshoes.api.entites;
+package br.com.primeshoes.api.entities;
 
-import java.sql.Date;
+import java.time.Instant;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,8 +21,8 @@ public class Promotion {
 	
 	private String name;
 	private float discountPercentage;
-	private Date startDate;
-	private Date endDate;
+	private Instant startDate;
+	private Instant endDate;
 	private boolean isActive;
 	
 	@ManyToOne
@@ -32,8 +32,8 @@ public class Promotion {
 	public Promotion() {
 	}
 
-	public Promotion(long id, String name, float discountPercentage, Date startDate, Date endDate,
-			boolean isActive) {
+	public Promotion(long id, String name, float discountPercentage, Instant startDate, Instant endDate,
+			boolean isActive, ProductVariation productVariation) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -41,6 +41,7 @@ public class Promotion {
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.isActive = isActive;
+		this.productVariation = productVariation;
 	}
 
 	public long getId() {
@@ -67,19 +68,19 @@ public class Promotion {
 		this.discountPercentage = discountPercentage;
 	}
 
-	public Date getStartDate() {
+	public Instant getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(Instant startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
+	public Instant getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Date endDate) {
+	public void setEndDate(Instant endDate) {
 		this.endDate = endDate;
 	}
 
@@ -89,6 +90,14 @@ public class Promotion {
 
 	public void setActive(boolean isActive) {
 		this.isActive = isActive;
+	}
+
+	public ProductVariation getProductVariation() {
+		return productVariation;
+	}
+
+	public void setProductVariation(ProductVariation productVariation) {
+		this.productVariation = productVariation;
 	}
 	
 	

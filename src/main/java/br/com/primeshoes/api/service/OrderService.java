@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import br.com.primeshoes.api.dtos.OrderCreateDTO;
 import br.com.primeshoes.api.dtos.OrderResponseDTO;
 import br.com.primeshoes.api.dtos.OrderUpdateDTO;
-import br.com.primeshoes.api.entites.Order;
+import br.com.primeshoes.api.entities.Order;
 import br.com.primeshoes.api.mappers.OrderMapper;
 import br.com.primeshoes.api.repository.OrderRepository;
 
@@ -43,7 +43,6 @@ public class OrderService {
 		order.setTotalPrice(orderUpdateDTO.totalPrice());
 		order.setStatus(orderUpdateDTO.status());
 		order.setPaymentMethod(orderUpdateDTO.paymentMethod());
-		order.setTrackingCode(orderUpdateDTO.trackingCode());
 		
 		return OrderMapper.toDTO(order);
 	}

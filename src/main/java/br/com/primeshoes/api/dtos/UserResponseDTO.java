@@ -1,6 +1,6 @@
 package br.com.primeshoes.api.dtos;
 
-import java.sql.Date;
+import java.time.Instant;
 
 import br.com.primeshoes.api.enums.Role;
 
@@ -10,6 +10,6 @@ public record UserResponseDTO(
 		String email,
 		String password,
 		Role role,
-		Date created_at,
-		Date updated_at
+		Instant created_at,
+		Instant updated_at
 		) {}

@@ -2,7 +2,7 @@ package br.com.primeshoes.api.dtos;
 
 import java.sql.Date;
 
-import br.com.primeshoes.api.entites.User;
+import br.com.primeshoes.api.entities.User;
 import br.com.primeshoes.api.enums.OrderStatus;
 import br.com.primeshoes.api.enums.PaymentMethod;
 

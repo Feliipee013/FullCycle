@@ -2,7 +2,7 @@ package br.com.primeshoes.api.mappers;
 
 import br.com.primeshoes.api.dtos.CartCreateDTO;
 import br.com.primeshoes.api.dtos.CartResponseDTO;
-import br.com.primeshoes.api.entites.Cart;
+import br.com.primeshoes.api.entities.Cart;
 
 public class CartMapper {
 	

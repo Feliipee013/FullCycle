@@ -8,8 +8,10 @@ import org.springframework.stereotype.Service;
 import br.com.primeshoes.api.dtos.UserCreateDTO;
 import br.com.primeshoes.api.dtos.UserResponseDTO;
 import br.com.primeshoes.api.dtos.UserUpdateDTO;
-import br.com.primeshoes.api.entites.User;
+import br.com.primeshoes.api.entities.Address;
+import br.com.primeshoes.api.entities.User;
 import br.com.primeshoes.api.mappers.UserMapper;
+import br.com.primeshoes.api.repository.AdressRepository;
 import br.com.primeshoes.api.repository.UserRepository;
 
 @Service
@@ -18,9 +20,17 @@ public class UserService {
 	@Autowired
 	UserRepository userRepository;
 	
+	@Autowired
+	AdressRepository adressRepsitory;
+	
 	public UserResponseDTO store(UserCreateDTO userCreateDTO) {
 		User user = UserMapper.toEntity(userCreateDTO);
 		User userResponse = userRepository.save(user);
+		
+		Address adress = new Address();
+		adress.setUser(userResponse);
+		adressRepsitory.save(adress);
+		
 		return UserMapper.toDTO(userResponse);
 		
 	}

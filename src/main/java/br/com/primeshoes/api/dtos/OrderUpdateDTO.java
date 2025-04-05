@@ -7,6 +7,5 @@ public record OrderUpdateDTO(
 		long id,
 		float totalPrice,
 		OrderStatus status,
-		PaymentMethod paymentMethod,
-		String trackingCode
+		PaymentMethod paymentMethod
 		) {}

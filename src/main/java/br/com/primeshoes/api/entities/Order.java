@@ -1,4 +1,4 @@
-package br.com.primeshoes.api.entites;
+package br.com.primeshoes.api.entities;
 
 import java.sql.Date;
 

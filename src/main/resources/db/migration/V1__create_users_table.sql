@@ -1,7 +1,9 @@
-CREATE TABLE Users (
+CREATE TABLE users (
 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(255) NOT NULL,
 	email VARCHAR(255) NOT NULL,
 	password VARCHAR(255) NOT NULL,
-	admin TINYINT default 0
+	role ENUM('SELLER', 'BUYER') NOT NULL,
+	created_at TIMESTAMP,
+	updated_at TIMESTAMP,
 );

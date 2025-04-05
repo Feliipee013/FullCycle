@@ -2,7 +2,7 @@ package br.com.primeshoes.api.mappers;
 
 import br.com.primeshoes.api.dtos.UserCreateDTO;
 import br.com.primeshoes.api.dtos.UserResponseDTO;
-import br.com.primeshoes.api.entites.User;
+import br.com.primeshoes.api.entities.User;
 
 public class UserMapper {
 	

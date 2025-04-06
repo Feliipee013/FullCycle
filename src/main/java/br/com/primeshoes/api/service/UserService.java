@@ -11,7 +11,7 @@ import br.com.primeshoes.api.dtos.UserUpdateDTO;
 import br.com.primeshoes.api.entities.Address;
 import br.com.primeshoes.api.entities.User;
 import br.com.primeshoes.api.mappers.UserMapper;
-import br.com.primeshoes.api.repository.AdressRepository;
+import br.com.primeshoes.api.repository.AddressRepository;
 import br.com.primeshoes.api.repository.UserRepository;
 
 @Service
@@ -21,7 +21,7 @@ public class UserService {
 	UserRepository userRepository;
 	
 	@Autowired
-	AdressRepository adressRepsitory;
+	AddressRepository adressRepsitory;
 	
 	public UserResponseDTO store(UserCreateDTO userCreateDTO) {
 		User user = UserMapper.toEntity(userCreateDTO);

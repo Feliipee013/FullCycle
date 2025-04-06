@@ -106,6 +106,7 @@
 					<url>jdbc:mysql://localhost:3306/primeshoes</url>
 					<user>root</user>
 					<password></password><!--n tem senha-->
+					<cleanDisabled>false</cleanDisabled>
 				</configuration>
 			</plugin>
 			

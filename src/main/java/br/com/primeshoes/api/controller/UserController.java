@@ -37,13 +37,13 @@ public class UserController {
 	@GetMapping
 	public ResponseEntity<List<UserResponseDTO>> list()
 	{
-		return new ResponseEntity(userService.list(), HttpStatus.OK);
+		return new ResponseEntity<>(userService.list(), HttpStatus.OK);
 	}
 	
 	@GetMapping("/{id_user}")
 	public ResponseEntity<UserResponseDTO> show(@PathVariable long id_user) {
 		try {
-			return new ResponseEntity(userService.show(id_user), HttpStatus.OK);
+			return new ResponseEntity<>(userService.show(id_user), HttpStatus.OK);
 			
 		} catch (Exception e) {
 			return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
@@ -53,7 +53,7 @@ public class UserController {
 	@PatchMapping
 	public ResponseEntity<UserResponseDTO> update(@RequestBody UserUpdateDTO userUpdateDTO) {
 		try {
-			return new ResponseEntity(userService.update(userUpdateDTO), HttpStatus.OK);
+			return new ResponseEntity<>(userService.update(userUpdateDTO), HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
@@ -63,9 +63,9 @@ public class UserController {
 	public ResponseEntity<String> destroy(@PathVariable long id_user) {
 		try {
 			userService.destroy(id_user);
-			return new ResponseEntity("Usuário deletado com sucesso", HttpStatus.OK);
+			return new ResponseEntity<>("Usuário deletado com sucesso", HttpStatus.OK);
 		} catch (Exception e) {
-			return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
 	}
 	

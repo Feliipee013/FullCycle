@@ -44,7 +44,7 @@ public class OrderService {
 		order.setStatus(orderUpdateDTO.status());
 		order.setPaymentMethod(orderUpdateDTO.paymentMethod());
 		
-		return OrderMapper.toDTO(order);
+		return OrderMapper.toDTO(orderRepository.save(order));
 	}
 	
 	public void destroy(long id) {

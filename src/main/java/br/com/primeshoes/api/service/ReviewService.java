@@ -40,7 +40,7 @@ public class ReviewService {
 		review.setUser(reviewUpdateDTO.user());
 		review.setProductVariation(reviewUpdateDTO.productVariation());
 		
-		return ReviewMapper.toDTO(review);
+		return ReviewMapper.toDTO(reviewRepository.save(review));
 	}
 	
 	public ReviewResponseDTO destroy(long id) {

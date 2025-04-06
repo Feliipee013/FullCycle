@@ -45,7 +45,7 @@ public class AddressService {
 		address.setZipCode(addressUpdateDTO.zipcode());
 		address.setUser(addressUpdateDTO.user());
 		
-		return AddressMapper.toDTO(address);
+		return AddressMapper.toDTO(addressRepository.save(address));
 	}
 	
 	public void destroy(long id) {

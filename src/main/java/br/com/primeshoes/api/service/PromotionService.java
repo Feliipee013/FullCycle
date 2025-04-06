@@ -47,7 +47,7 @@ public class PromotionService {
 		promotion.setActive(promotionUpdateDTO.isActive());
 		promotion.setProductVariation(promotionUpdateDTO.productVariation());
 		
-		return PromotionMapper.toDTO(promotion);
+		return PromotionMapper.toDTO(promotionRepository.save(promotion));
 	}
 	
 	public void destroy(long id) {

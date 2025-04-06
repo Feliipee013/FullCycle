@@ -1,17 +1,13 @@
 package br.com.primeshoes.api.dtos;
 
-import java.time.Instant;
-
 import br.com.primeshoes.api.entities.Order;
 import br.com.primeshoes.api.enums.PaymentMethod;
 import br.com.primeshoes.api.enums.PaymentStatus;
 
-public record PaymentResponseDTO(
+public record PaymentUpdateDTO(
 		long id,
 		Order order,
 		float amount,
 		PaymentMethod paymentMethod,
-		PaymentStatus paymentStatus,
-		Instant created_at,
-		Instant updated_at
+		PaymentStatus paymentStatus
 		) {}

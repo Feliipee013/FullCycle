@@ -168,6 +168,14 @@ We love your input! Check out our [Contributing Guide](CONTRIBUTING.md) for ways
 
 This project is under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🌟 Thanks
+
+<div align="center">
+
+Special thanks to [Felipe Taveira](https://github.com/Feliipee013) for the inspiration on the basic structure!
+
+</div>
+
 ---
 
 <div align="center">

@@ -1,6 +1,6 @@
 package br.com.primeshoes.api.common.config;
 
-import br.com.primeshoes.api.repository.UserRepository;
+import br.com.primeshoes.api.modules.user.Repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

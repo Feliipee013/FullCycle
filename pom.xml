@@ -135,7 +135,6 @@
 				<configuration>
 					<url>jdbc:mysql://localhost:3306/primeshoes</url>
 					<user>root</user>
-					<password>123456</password><!--n tem senha-->
 					<cleanDisabled>false</cleanDisabled>
 				</configuration>
 			</plugin>

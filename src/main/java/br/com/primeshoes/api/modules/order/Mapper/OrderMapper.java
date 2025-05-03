@@ -1,7 +1,7 @@
 package br.com.primeshoes.api.modules.order.Mapper;
 
-import br.com.primeshoes.api.modules.order.Dto.OrderCreateDTO;
-import br.com.primeshoes.api.modules.order.Dto.OrderResponseDTO;
+import br.com.primeshoes.api.modules.order.Dto.Request.OrderCreateDTO;
+import br.com.primeshoes.api.modules.order.Dto.Response.OrderResponseDTO;
 import br.com.primeshoes.api.modules.order.Entity.Order;
 
 public class OrderMapper {

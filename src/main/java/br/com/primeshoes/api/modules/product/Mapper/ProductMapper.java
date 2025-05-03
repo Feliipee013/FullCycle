@@ -1,7 +1,7 @@
 package br.com.primeshoes.api.modules.product.Mapper;
 
-import br.com.primeshoes.api.modules.product.Dto.ProductCreateDTO;
-import br.com.primeshoes.api.modules.product.Dto.ProductResponseDTO;
+import br.com.primeshoes.api.modules.product.Dto.Request.ProductCreateDTO;
+import br.com.primeshoes.api.modules.product.Dto.Response.ProductResponseDTO;
 import br.com.primeshoes.api.modules.product.Entity.Product;
 
 public class ProductMapper {

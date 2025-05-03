@@ -1,7 +1,7 @@
 package br.com.primeshoes.api.modules.promotion.Mapper;
 
-import br.com.primeshoes.api.modules.promotion.Dto.PromotionCreateDTO;
-import br.com.primeshoes.api.modules.promotion.Dto.PromotionResponseDTO;
+import br.com.primeshoes.api.modules.promotion.Dto.Request.PromotionCreateDTO;
+import br.com.primeshoes.api.modules.promotion.Dto.Response.PromotionResponseDTO;
 import br.com.primeshoes.api.modules.promotion.Entity.Promotion;
 
 public class PromotionMapper {

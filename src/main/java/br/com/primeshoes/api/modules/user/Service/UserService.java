@@ -2,9 +2,9 @@ package br.com.primeshoes.api.modules.user.Service;
 
 import java.util.List;
 
-import br.com.primeshoes.api.modules.user.Dto.UserCreateDTO;
-import br.com.primeshoes.api.modules.user.Dto.UserResponseDTO;
-import br.com.primeshoes.api.modules.user.Dto.UserUpdateDTO;
+import br.com.primeshoes.api.modules.user.Dto.Request.UserCreateDTO;
+import br.com.primeshoes.api.modules.user.Dto.Response.UserResponseDTO;
+import br.com.primeshoes.api.modules.user.Dto.Request.UserUpdateDTO;
 import br.com.primeshoes.api.modules.user.Entity.User;
 import br.com.primeshoes.api.modules.user.Mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;

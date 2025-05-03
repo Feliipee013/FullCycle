@@ -1,7 +1,7 @@
 package br.com.primeshoes.api.modules.review.Mapper;
 
-import br.com.primeshoes.api.modules.review.Dto.ReviewCreateDTO;
-import br.com.primeshoes.api.modules.review.Dto.ReviewResponseDTO;
+import br.com.primeshoes.api.modules.review.Dto.Request.ReviewCreateDTO;
+import br.com.primeshoes.api.modules.review.Dto.Response.ReviewResponseDTO;
 import br.com.primeshoes.api.modules.review.Entity.Review;
 
 public class ReviewMapper {

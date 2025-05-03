@@ -1,7 +1,7 @@
 package br.com.primeshoes.api.modules.user.Mapper;
 
-import br.com.primeshoes.api.modules.user.Dto.UserCreateDTO;
-import br.com.primeshoes.api.modules.user.Dto.UserResponseDTO;
+import br.com.primeshoes.api.modules.user.Dto.Request.UserCreateDTO;
+import br.com.primeshoes.api.modules.user.Dto.Response.UserResponseDTO;
 import br.com.primeshoes.api.modules.user.Entity.User;
 
 public class UserMapper {

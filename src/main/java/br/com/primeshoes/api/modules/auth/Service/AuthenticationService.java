@@ -1,6 +1,6 @@
 package br.com.primeshoes.api.modules.auth.Service;
 
-import br.com.primeshoes.api.modules.auth.Login.Dto.LoginUserDto;
+import br.com.primeshoes.api.modules.auth.Login.Dto.Request.LoginUserDto;
 import br.com.primeshoes.api.modules.auth.SingUp.Dto.SignUpDto;
 import br.com.primeshoes.api.modules.user.Entity.User;
 import br.com.primeshoes.api.modules.role.Enum.Role;

@@ -1,8 +1,8 @@
 package br.com.primeshoes.api.modules.auth;
 
 import br.com.primeshoes.api.common.services.JwtService;
-import br.com.primeshoes.api.modules.auth.Login.Dto.LoginResponseDto;
-import br.com.primeshoes.api.modules.auth.Login.Dto.LoginUserDto;
+import br.com.primeshoes.api.modules.auth.Login.Dto.Response.LoginResponseDto;
+import br.com.primeshoes.api.modules.auth.Login.Dto.Request.LoginUserDto;
 import br.com.primeshoes.api.modules.auth.Service.AuthenticationService;
 import br.com.primeshoes.api.modules.auth.SingUp.Dto.SignUpDto;
 import br.com.primeshoes.api.modules.user.Entity.User;

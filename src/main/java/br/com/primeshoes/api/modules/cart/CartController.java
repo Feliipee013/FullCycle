@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.modules.cart.Dto.CartCreateDTO;
-import br.com.primeshoes.api.modules.cart.Dto.CartResponseDTO;
-import br.com.primeshoes.api.modules.cart.Dto.CartUpdateDTO;
+import br.com.primeshoes.api.modules.cart.Dto.Request.CartCreateDTO;
+import br.com.primeshoes.api.modules.cart.Dto.Response.CartResponseDTO;
+import br.com.primeshoes.api.modules.cart.Dto.Request.CartUpdateDTO;
 import br.com.primeshoes.api.modules.cart.Service.CartService;
 
 @RestController

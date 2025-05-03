@@ -2,9 +2,9 @@ package br.com.primeshoes.api.modules.order.Service;
 
 import java.util.List;
 
-import br.com.primeshoes.api.modules.order.Dto.OrderCreateDTO;
-import br.com.primeshoes.api.modules.order.Dto.OrderResponseDTO;
-import br.com.primeshoes.api.modules.order.Dto.OrderUpdateDTO;
+import br.com.primeshoes.api.modules.order.Dto.Request.OrderCreateDTO;
+import br.com.primeshoes.api.modules.order.Dto.Response.OrderResponseDTO;
+import br.com.primeshoes.api.modules.order.Dto.Request.OrderUpdateDTO;
 import br.com.primeshoes.api.modules.order.Entity.Order;
 import br.com.primeshoes.api.modules.order.Mapper.OrderMapper;
 import org.springframework.beans.factory.annotation.Autowired;

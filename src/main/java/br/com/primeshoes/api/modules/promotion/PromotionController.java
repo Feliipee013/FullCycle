@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.modules.promotion.Dto.PromotionCreateDTO;
-import br.com.primeshoes.api.modules.promotion.Dto.PromotionResponseDTO;
-import br.com.primeshoes.api.modules.promotion.Dto.PromotionUpdateDTO;
+import br.com.primeshoes.api.modules.promotion.Dto.Request.PromotionCreateDTO;
+import br.com.primeshoes.api.modules.promotion.Dto.Response.PromotionResponseDTO;
+import br.com.primeshoes.api.modules.promotion.Dto.Request.PromotionUpdateDTO;
 import br.com.primeshoes.api.modules.promotion.Service.PromotionService;
 
 @RestController

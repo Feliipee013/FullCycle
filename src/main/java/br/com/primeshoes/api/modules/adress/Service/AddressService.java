@@ -2,9 +2,9 @@ package br.com.primeshoes.api.modules.adress.Service;
 
 import java.util.List;
 
-import br.com.primeshoes.api.modules.adress.Dto.AddressCreateDTO;
-import br.com.primeshoes.api.modules.adress.Dto.AddressResponseDTO;
-import br.com.primeshoes.api.modules.adress.Dto.AddressUpdateDTO;
+import br.com.primeshoes.api.modules.adress.Dto.Request.AddressCreateDTO;
+import br.com.primeshoes.api.modules.adress.Dto.Response.AddressResponseDTO;
+import br.com.primeshoes.api.modules.adress.Dto.Request.AddressUpdateDTO;
 import br.com.primeshoes.api.modules.adress.Entity.Address;
 import br.com.primeshoes.api.modules.adress.Mapper.AddressMapper;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,9 +2,9 @@ package br.com.primeshoes.api.modules.promotion.Service;
 
 import java.util.List;
 
-import br.com.primeshoes.api.modules.promotion.Dto.PromotionCreateDTO;
-import br.com.primeshoes.api.modules.promotion.Dto.PromotionResponseDTO;
-import br.com.primeshoes.api.modules.promotion.Dto.PromotionUpdateDTO;
+import br.com.primeshoes.api.modules.promotion.Dto.Request.PromotionCreateDTO;
+import br.com.primeshoes.api.modules.promotion.Dto.Response.PromotionResponseDTO;
+import br.com.primeshoes.api.modules.promotion.Dto.Request.PromotionUpdateDTO;
 import br.com.primeshoes.api.modules.promotion.Entity.Promotion;
 import br.com.primeshoes.api.modules.promotion.Mapper.PromotionMapper;
 import org.springframework.beans.factory.annotation.Autowired;

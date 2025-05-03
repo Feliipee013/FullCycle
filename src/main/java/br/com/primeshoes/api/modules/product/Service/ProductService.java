@@ -2,9 +2,9 @@ package br.com.primeshoes.api.modules.product.Service;
 
 import java.util.List;
 
-import br.com.primeshoes.api.modules.product.Dto.ProductCreateDTO;
-import br.com.primeshoes.api.modules.product.Dto.ProductResponseDTO;
-import br.com.primeshoes.api.modules.product.Dto.ProductUpdateDTO;
+import br.com.primeshoes.api.modules.product.Dto.Request.ProductCreateDTO;
+import br.com.primeshoes.api.modules.product.Dto.Response.ProductResponseDTO;
+import br.com.primeshoes.api.modules.product.Dto.Request.ProductUpdateDTO;
 import br.com.primeshoes.api.modules.product.Entity.Product;
 import br.com.primeshoes.api.modules.product.Mapper.ProductMapper;
 import br.com.primeshoes.api.modules.product.Repository.ProductRepository;

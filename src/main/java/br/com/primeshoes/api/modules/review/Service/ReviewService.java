@@ -2,9 +2,9 @@ package br.com.primeshoes.api.modules.review.Service;
 
 import java.util.List;
 
-import br.com.primeshoes.api.modules.review.Dto.ReviewCreateDTO;
-import br.com.primeshoes.api.modules.review.Dto.ReviewResponseDTO;
-import br.com.primeshoes.api.modules.review.Dto.ReviewUpdateDTO;
+import br.com.primeshoes.api.modules.review.Dto.Request.ReviewCreateDTO;
+import br.com.primeshoes.api.modules.review.Dto.Response.ReviewResponseDTO;
+import br.com.primeshoes.api.modules.review.Dto.Request.ReviewUpdateDTO;
 import br.com.primeshoes.api.modules.review.Entity.Review;
 import br.com.primeshoes.api.modules.review.Mapper.ReviewMapper;
 import org.springframework.beans.factory.annotation.Autowired;

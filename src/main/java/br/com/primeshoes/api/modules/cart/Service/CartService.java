@@ -3,9 +3,9 @@ package br.com.primeshoes.api.modules.cart.Service;
 import java.util.List;
 
 import br.com.primeshoes.api.modules.cart.Entity.Cart;
-import br.com.primeshoes.api.modules.cart.Dto.CartCreateDTO;
-import br.com.primeshoes.api.modules.cart.Dto.CartResponseDTO;
-import br.com.primeshoes.api.modules.cart.Dto.CartUpdateDTO;
+import br.com.primeshoes.api.modules.cart.Dto.Request.CartCreateDTO;
+import br.com.primeshoes.api.modules.cart.Dto.Response.CartResponseDTO;
+import br.com.primeshoes.api.modules.cart.Dto.Request.CartUpdateDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

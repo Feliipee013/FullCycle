@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.modules.adress.Dto.AddressCreateDTO;
-import br.com.primeshoes.api.modules.adress.Dto.AddressResponseDTO;
-import br.com.primeshoes.api.modules.adress.Dto.AddressUpdateDTO;
+import br.com.primeshoes.api.modules.adress.Dto.Request.AddressCreateDTO;
+import br.com.primeshoes.api.modules.adress.Dto.Response.AddressResponseDTO;
+import br.com.primeshoes.api.modules.adress.Dto.Request.AddressUpdateDTO;
 import br.com.primeshoes.api.modules.adress.Service.AddressService;
 
 @RestController

@@ -1,163 +1,163 @@
 # Prime Shoes API
 
-## 🏗️ Arquitetura do Projeto
+## 🏗️ Project Architecture
 
-Este projeto segue uma arquitetura modular e limpa, organizada por domínios de negócio.
+This project follows a clean, modular architecture organized by business domains.
 
-### Estrutura de Diretórios
+### Directory Structure
 
 ```
 src/main/java/br/com/primeshoes/api/
-├── ApiApplication.java        # Ponto de entrada da aplicação
-├── common/                   # Componentes compartilhados
-│   ├── config/              # Configurações globais
-│   ├── exceptions/          # Tratamento de exceções
-│   ├── middleware/          # Middlewares da aplicação
-│   ├── services/            # Serviços compartilhados
-│   └── utils/               # Utilitários comuns
-└── modules/                 # Módulos do domínio
-    ├── address/             # Gestão de endereços
-    ├── auth/                # Autenticação e autorização
-    ├── cart/                # Carrinho de compras
-    ├── order/               # Gestão de pedidos
-    ├── payment/             # Processamento de pagamentos
-    ├── product/             # Catálogo de produtos
-    ├── promotion/           # Sistema de promoções
-    ├── review/              # Avaliações de produtos
-    ├── role/                # Gestão de papéis/permissões
-    └── user/                # Gestão de usuários
+├── ApiApplication.java        # Application entry point
+├── common/                   # Shared components
+│   ├── config/              # Global configurations
+│   ├── exceptions/          # Exception handling
+│   ├── middleware/          # Application middleware
+│   ├── services/            # Shared services
+│   └── utils/               # Common utilities
+└── modules/                 # Domain modules
+    ├── address/             # Address management
+    ├── auth/                # Authentication and authorization
+    ├── cart/                # Shopping cart
+    ├── order/               # Order management
+    ├── payment/             # Payment processing
+    ├── product/             # Product catalog
+    ├── promotion/           # Promotion system
+    ├── review/              # Product reviews
+    ├── role/                # Role management
+    └── user/                # User management
 ```
 
-## 📐 Padrões Arquiteturais
+## 📐 Architectural Patterns
 
-### Arquitetura Modular
-O projeto é organizado em módulos independentes, cada um representando um domínio específico do negócio. Esta abordagem permite:
+### Modular Architecture
+The project is organized into independent modules, each representing a specific business domain. This approach provides:
 
-- **Baixo Acoplamento**: Módulos são independentes e podem ser modificados sem afetar outros
-- **Alta Coesão**: Funcionalidades relacionadas são mantidas juntas
-- **Manutenibilidade**: Facilita a manutenção e evolução do código
+- **Low Coupling**: Modules are independent and can be modified without affecting others
+- **High Cohesion**: Related functionalities are kept together
+- **Maintainability**: Facilitates code maintenance and evolution
 
-### Estrutura dos Módulos
-Cada módulo segue uma estrutura consistente com as seguintes camadas:
+### Module Structure
+Each module follows a consistent structure with the following layers:
 
 ```
-módulo/
-├── Dto/            # Data Transfer Objects - Objetos para transferência de dados
-├── Entity/         # Entidades do domínio e modelos de dados
-├── Mapper/         # Conversores entre DTOs e Entidades
-├── Repository/     # Camada de acesso a dados
-├── Service/        # Lógica de negócio
-└── Controller      # Endpoints da API REST
+module/
+├── Dto/            # Data Transfer Objects
+├── Entity/         # Domain entities and data models
+├── Mapper/         # DTO to Entity converters
+├── Repository/     # Data access layer
+├── Service/        # Business logic
+└── Controller      # REST API endpoints
 ```
 
-#### Camadas e Responsabilidades
+#### Layers and Responsibilities
 
 - **Dto (Data Transfer Objects)**
-  - Objetos para transferência de dados entre camadas
-  - Validação de dados de entrada/saída
-  - Documentação da API (Swagger/OpenAPI)
+  - Data transfer between layers
+  - Input/Output validation
+  - API documentation (Swagger/OpenAPI)
 
 - **Entity**
-  - Modelos de domínio
-  - Mapeamento ORM
-  - Regras de persistência
+  - Domain models
+  - ORM mapping
+  - Persistence rules
 
 - **Mapper**
-  - Conversão entre DTOs e Entidades
-  - Transformação de dados
-  - Mapeamento de objetos
+  - DTO to Entity conversion
+  - Data transformation
+  - Object mapping
 
 - **Repository**
-  - Acesso a dados
-  - Queries e operações no banco
-  - Persistência de entidades
+  - Data access
+  - Database queries and operations
+  - Entity persistence
 
 - **Service**
-  - Regras de negócio
-  - Orquestração de operações
-  - Tratamento de casos de uso
+  - Business rules
+  - Operation orchestration
+  - Use case handling
 
 - **Controller**
-  - Endpoints REST
-  - Roteamento de requisições
-  - Tratamento de requisições HTTP
+  - REST endpoints
+  - Request routing
+  - HTTP request handling
 
-### Camada Common
-A pasta `common` contém componentes reutilizáveis:
+### Common Layer
+The `common` folder contains reusable components:
 
-- **config/**: Configurações globais
-- **exceptions/**: Tratamento centralizado de exceções
-- **middleware/**: Interceptadores e filtros
-- **services/**: Serviços compartilhados
-- **utils/**: Funções utilitárias
+- **config/**: Global configurations
+- **exceptions/**: Centralized exception handling
+- **middleware/**: Interceptors and filters
+- **services/**: Shared services
+- **utils/**: Utility functions
 
-## 📊 Diagrama da Arquitetura
+## 📊 Architecture Diagram
 
-### Diagrama de Classes UML
-![Diagrama de Classes](docs/images/image.png)
+### UML Class Diagram
+![Class Diagram](docs/images/image.png)
 
-O diagrama acima representa a estrutura completa do sistema, mostrando:
-- Entidades principais e seus atributos
-- Relacionamentos entre as entidades
-- Métodos principais de cada classe
-- Cardinalidade das relações
+The diagram above represents the complete system structure, showing:
+- Main entities and their attributes
+- Relationships between entities
+- Main methods of each class
+- Relationship cardinality
 
-O código fonte do diagrama em formato PlantUML pode ser encontrado em [docs/diagrams/architecture.puml](docs/diagrams/architecture.puml).
+The source code for the diagram in PlantUML format can be found at [docs/diagrams/architecture.puml](docs/diagrams/architecture.puml).
 
-## 🔍 Módulos do Sistema
+## 🔍 System Modules
 
-### 1. Auth e Role
-- Autenticação e autorização de usuários
-- Controle de acesso baseado em papéis
+### 1. Auth and Role
+- User authentication and authorization
+- Role-based access control
 
-### 2. User e Address
-- Gestão de usuários
-- Gerenciamento de endereços
+### 2. User and Address
+- User management
+- Address management
 
-### 3. Product e Review
-- Catálogo de produtos
-- Sistema de avaliações
+### 3. Product and Review
+- Product catalog
+- Review system
 
-### 4. Cart e Order
-- Carrinho de compras
-- Gestão de pedidos
+### 4. Cart and Order
+- Shopping cart
+- Order management
 
 ### 5. Payment
-- Processamento de pagamentos
+- Payment processing
 
 ### 6. Promotion
-- Sistema de promoções e descontos
+- Promotions and discounts system
 
-## 🚀 Começando
+## 🚀 Getting Started
 
-### Requisitos
+### Requirements
 - Java 17+
 - Maven 3.8+
 - PostgreSQL
 
-### Instalação
-1. Clone o repositório
-2. Configure as variáveis de ambiente necessárias
-3. Execute:
+### Installation
+1. Clone the repository
+2. Configure the required environment variables
+3. Run:
    ```bash
    ./mvnw clean install
    ./mvnw spring-boot:run
    ```
 
-### Documentação da API
-Swagger UI disponível em:
+### API Documentation
+Swagger UI available at:
 ```
 http://localhost:8080/swagger-ui.html
 ```
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-1. Fork o projeto
-2. Crie uma branch (`git checkout -b feature/NovaMelhoria`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova melhoria'`)
-4. Push para a branch (`git push origin feature/NovaMelhoria`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create a branch (`git checkout -b feature/NewFeature`)
+3. Commit your changes (`git commit -m 'Add NewFeature'`)
+4. Push to the branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob a licença [MIT](LICENSE). 
+This project is under the [MIT](LICENSE) license. 

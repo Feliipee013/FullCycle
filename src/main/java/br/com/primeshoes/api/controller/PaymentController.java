@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.dtos.PaymentCreateDTO;
-import br.com.primeshoes.api.dtos.PaymentResponseDTO;
-import br.com.primeshoes.api.dtos.PaymentUpdateDTO;
-import br.com.primeshoes.api.service.PaymentService;
+import br.com.primeshoes.api.dtos.Payment.PaymentCreateDTO;
+import br.com.primeshoes.api.dtos.Payment.PaymentResponseDTO;
+import br.com.primeshoes.api.dtos.Payment.PaymentUpdateDTO;
+import br.com.primeshoes.api.service.Payment.PaymentService;
 
 @RestController
 @RequestMapping("/api/payemnts")

@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.dtos.AddressCreateDTO;
-import br.com.primeshoes.api.dtos.AddressResponseDTO;
-import br.com.primeshoes.api.dtos.AddressUpdateDTO;
-import br.com.primeshoes.api.service.AddressService;
+import br.com.primeshoes.api.dtos.Address.AddressCreateDTO;
+import br.com.primeshoes.api.dtos.Address.AddressResponseDTO;
+import br.com.primeshoes.api.dtos.Address.AddressUpdateDTO;
+import br.com.primeshoes.api.service.Address.AddressService;
 
 @RestController
 @RequestMapping("/api/addresses")

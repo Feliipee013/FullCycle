@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.dtos.PromotionCreateDTO;
-import br.com.primeshoes.api.dtos.PromotionResponseDTO;
-import br.com.primeshoes.api.dtos.PromotionUpdateDTO;
-import br.com.primeshoes.api.service.PromotionService;
+import br.com.primeshoes.api.dtos.Promotion.PromotionCreateDTO;
+import br.com.primeshoes.api.dtos.Promotion.PromotionResponseDTO;
+import br.com.primeshoes.api.dtos.Promotion.PromotionUpdateDTO;
+import br.com.primeshoes.api.service.Promotion.PromotionService;
 
 @RestController
 @RequestMapping("/api/promotions")

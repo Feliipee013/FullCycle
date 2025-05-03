@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.dtos.CartCreateDTO;
-import br.com.primeshoes.api.dtos.CartResponseDTO;
-import br.com.primeshoes.api.dtos.CartUpdateDTO;
-import br.com.primeshoes.api.service.CartService;
+import br.com.primeshoes.api.dtos.Cart.CartCreateDTO;
+import br.com.primeshoes.api.dtos.Cart.CartResponseDTO;
+import br.com.primeshoes.api.dtos.Cart.CartUpdateDTO;
+import br.com.primeshoes.api.service.Cart.CartService;
 
 @RestController
 @RequestMapping("/api/carts")

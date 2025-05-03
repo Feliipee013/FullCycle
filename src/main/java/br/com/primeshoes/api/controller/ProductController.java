@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.dtos.ProductCreateDTO;
-import br.com.primeshoes.api.dtos.ProductResponseDTO;
-import br.com.primeshoes.api.dtos.ProductUpdateDTO;
-import br.com.primeshoes.api.service.ProductService;
+import br.com.primeshoes.api.dtos.Product.ProductCreateDTO;
+import br.com.primeshoes.api.dtos.Product.ProductResponseDTO;
+import br.com.primeshoes.api.dtos.Product.ProductUpdateDTO;
+import br.com.primeshoes.api.service.Product.ProductService;
 
 @RestController
 @RequestMapping("api/products")

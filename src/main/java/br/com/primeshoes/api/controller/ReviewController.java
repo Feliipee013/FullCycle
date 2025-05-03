@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.dtos.ReviewCreateDTO;
-import br.com.primeshoes.api.dtos.ReviewResponseDTO;
-import br.com.primeshoes.api.dtos.ReviewUpdateDTO;
-import br.com.primeshoes.api.service.ReviewService;
+import br.com.primeshoes.api.dtos.Review.ReviewCreateDTO;
+import br.com.primeshoes.api.dtos.Review.ReviewResponseDTO;
+import br.com.primeshoes.api.dtos.Review.ReviewUpdateDTO;
+import br.com.primeshoes.api.service.Review.ReviewService;
 
 @RestController
 @RequestMapping("/api/reviews")

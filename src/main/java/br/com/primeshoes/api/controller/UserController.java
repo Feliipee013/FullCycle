@@ -2,9 +2,9 @@ package br.com.primeshoes.api.controller;
 
 import java.util.List;
 
+import jakarta.annotation.security.PermitAll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,20 +15,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.primeshoes.api.dtos.UserCreateDTO;
-import br.com.primeshoes.api.dtos.UserResponseDTO;
-import br.com.primeshoes.api.dtos.UserUpdateDTO;
-import br.com.primeshoes.api.mappers.UserMapper;
-import br.com.primeshoes.api.service.UserService;
+import br.com.primeshoes.api.dtos.User.UserCreateDTO;
+import br.com.primeshoes.api.dtos.User.UserResponseDTO;
+import br.com.primeshoes.api.dtos.User.UserUpdateDTO;
+import br.com.primeshoes.api.service.User.UserService;
 
 @RestController
 @RequestMapping("/api/users")
+@PermitAll
 public class UserController {
 	@Autowired
 	UserService userService;
 	
 	
 	@PostMapping
+	@PermitAll
 	public ResponseEntity<UserResponseDTO> store(@RequestBody UserCreateDTO userCreateDTO) {
 		return new ResponseEntity<>(userService.store(userCreateDTO), HttpStatus.CREATED);
 	}

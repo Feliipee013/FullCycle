@@ -38,16 +38,49 @@ O projeto é organizado em módulos independentes, cada um representando um dom�
 - **Manutenibilidade**: Facilita a manutenção e evolução do código
 
 ### Estrutura dos Módulos
-Cada módulo segue uma estrutura consistente:
+Cada módulo segue uma estrutura consistente com as seguintes camadas:
 
 ```
 módulo/
-├── controller/     # Endpoints da API
-├── service/        # Lógica de negócio
-├── repository/     # Acesso a dados
-├── dto/            # Objetos de transferência de dados
-└── model/          # Entidades do domínio
+├── Dto/            # Data Transfer Objects - Objetos para transferência de dados
+├── Entity/         # Entidades do domínio e modelos de dados
+├── Mapper/         # Conversores entre DTOs e Entidades
+├── Repository/     # Camada de acesso a dados
+├── Service/        # Lógica de negócio
+└── Controller      # Endpoints da API REST
 ```
+
+#### Camadas e Responsabilidades
+
+- **Dto (Data Transfer Objects)**
+  - Objetos para transferência de dados entre camadas
+  - Validação de dados de entrada/saída
+  - Documentação da API (Swagger/OpenAPI)
+
+- **Entity**
+  - Modelos de domínio
+  - Mapeamento ORM
+  - Regras de persistência
+
+- **Mapper**
+  - Conversão entre DTOs e Entidades
+  - Transformação de dados
+  - Mapeamento de objetos
+
+- **Repository**
+  - Acesso a dados
+  - Queries e operações no banco
+  - Persistência de entidades
+
+- **Service**
+  - Regras de negócio
+  - Orquestração de operações
+  - Tratamento de casos de uso
+
+- **Controller**
+  - Endpoints REST
+  - Roteamento de requisições
+  - Tratamento de requisições HTTP
 
 ### Camada Common
 A pasta `common` contém componentes reutilizáveis:

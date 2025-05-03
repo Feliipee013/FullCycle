@@ -61,7 +61,7 @@ A pasta `common` contém componentes reutilizáveis:
 ## 📊 Diagrama da Arquitetura
 
 ### Diagrama de Classes UML
-![Diagrama de Classes](docs/images/class-diagram.png)
+![Diagrama de Classes](docs/images/image.png)
 
 O diagrama acima representa a estrutura completa do sistema, mostrando:
 - Entidades principais e seus atributos

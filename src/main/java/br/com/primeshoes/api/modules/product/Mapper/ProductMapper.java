@@ -6,7 +6,18 @@ import br.com.primeshoes.api.modules.product.Entity.Product;
 
 public class ProductMapper {
 	public static ProductResponseDTO toDTO(Product product) {
-		return new ProductResponseDTO(product.getId(), product.getName(),product.getDescription(), product.getPrice(), product.getCategory(), product.getBrand(), product.getImageUrl(),product.getRating(), product.getCreated_at(), product.getUpdated_at());
+		return new ProductResponseDTO(
+				product.getId(),
+				product.getName(),
+				product.getDescription(),
+				product.getPrice(),
+				product.getCategory(),
+				product.getBrand(),
+				product.getImageUrl(),
+				product.getRating(),
+				product.getCreated_at(),
+				product.getUpdated_at()
+		);
 	}
 	public static Product toEntity(ProductCreateDTO productCreateDTO) {
 		Product product = new Product();

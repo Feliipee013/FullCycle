@@ -6,7 +6,17 @@ import br.com.primeshoes.api.modules.adress.Entity.Address;
 
 public class AddressMapper {
     public static AddressResponseDTO toDTO(Address address) {
-        return new AddressResponseDTO(address.getId(), address.getStreet(), address.getNumber(), address.getNeighborhood(), address.getCity(), address.getState(), address.getCompliment(), address.getZipcode(), address.getUser());
+        return new AddressResponseDTO(
+                address.getId(),
+                address.getStreet(),
+                address.getNumber(),
+                address.getNeighborhood(),
+                address.getCity(),
+                address.getState(),
+                address.getCompliment(),
+                address.getZipcode(),
+                address.getUser()
+        );
     }
 
     public static Address toEntity(AddressCreateDTO addressCreateDTO) {

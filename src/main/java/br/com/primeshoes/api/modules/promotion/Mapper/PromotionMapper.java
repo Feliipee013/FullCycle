@@ -6,7 +6,15 @@ import br.com.primeshoes.api.modules.promotion.Entity.Promotion;
 
 public class PromotionMapper {
 	public static PromotionResponseDTO toDTO(Promotion promotion) {
-		return new PromotionResponseDTO(promotion.getId(), promotion.getName(), promotion.getDiscountPercentage(), promotion.getStartDate(), promotion.getEndDate(), promotion.isActive(), promotion.getProductVariation());
+		return new PromotionResponseDTO(
+				promotion.getId(),
+				promotion.getName(),
+				promotion.getDiscountPercentage(),
+				promotion.getStartDate(),
+				promotion.getEndDate(),
+				promotion.isActive(),
+				promotion.getProductVariation()
+		);
 	}
 	
 	public static Promotion toEntity(PromotionCreateDTO promotionCreateDTO) {

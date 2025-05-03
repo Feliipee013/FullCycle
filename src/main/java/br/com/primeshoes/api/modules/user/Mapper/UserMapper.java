@@ -7,8 +7,15 @@ import br.com.primeshoes.api.modules.user.Entity.User;
 public class UserMapper {
 	
 	public static UserResponseDTO toDTO(User user) {
-		UserResponseDTO userResponse = new UserResponseDTO(user.getId(), user.getName(), user.getEmail(), user.getPassword(), user.getRole(),user.getCreated_at(), user.getUpdated_at());
-		return userResponse;
+        return new UserResponseDTO(
+				user.getId(),
+				user.getName(),
+				user.getEmail(),
+				user.getPassword(),
+				user.getRole(),
+				user.getCreated_at(),
+				user.getUpdated_at()
+		);
 	}
 	public static User toEntity(UserCreateDTO userCreateDTO) {
 		User user = new User();

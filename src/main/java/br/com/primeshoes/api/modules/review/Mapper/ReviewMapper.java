@@ -7,7 +7,15 @@ import br.com.primeshoes.api.modules.review.Entity.Review;
 public class ReviewMapper {
 	
 	public static ReviewResponseDTO toDTO(Review review) {
-		return new ReviewResponseDTO(review.getId(), review.getRating(), review.getComment(), review.getUser(), review.getProductVariation(), review.getCreated_at(), review.getUpdated_at());
+		return new ReviewResponseDTO(
+				review.getId(),
+				review.getRating(),
+				review.getComment(),
+				review.getUser(),
+				review.getProductVariation(),
+				review.getCreated_at(),
+				review.getUpdated_at()
+		);
 	}
 	
 	public static Review toEntity(ReviewCreateDTO reviewCreateDTO) {

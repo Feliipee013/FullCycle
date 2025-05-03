@@ -7,9 +7,10 @@ import br.com.primeshoes.api.modules.cart.Entity.Cart;
 public class CartMapper {
 	
 	public static CartResponseDTO toDTO(Cart cart) {
-		System.out.println("CartMapper.toDTO");
-		System.out.println(cart);
-        return new CartResponseDTO(cart.getId(), (int) cart.getUser().getId());
+        return new CartResponseDTO(
+				cart.getId(),
+				(int) cart.getUser().getId()
+		);
 	}
 	
 	public static Cart toEntity(CartCreateDTO cartCreateDTO) {

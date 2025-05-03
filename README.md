@@ -1,163 +1,177 @@
-# Prime Shoes API
+# Prime Shoes API 👟
+
+<div align="center">
+
+[![Java](https://img.shields.io/badge/Java-17+-orange.svg)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
+[![Maven](https://img.shields.io/badge/Maven-3.8+-blue.svg)](https://maven.apache.org/)
+[![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+
+An elegant e-commerce API built with modern architecture and best practices.
+
+[Getting Started](#-getting-started) •
+[Architecture](#-project-architecture) •
+[Documentation](#-api-documentation) •
+[Contributing](#-contributing)
+
+</div>
+
+---
+
+## ✨ Features
+
+- 🛡️ **Secure Authentication** - JWT-based auth with role management
+- 🛍️ **Complete E-commerce Flow** - From product browsing to order completion
+- 💳 **Payment Processing** - Integrated payment system
+- 🎯 **Promotion Engine** - Flexible discount and promotion system
+- 📦 **Order Management** - Comprehensive order tracking
+- ⭐ **Review System** - Product ratings and reviews
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+```bash
+- Java 17+
+- Maven 3.8+
+- PostgreSQL
+```
+
+### Quick Start 🏃‍♂️
+
+1️⃣ **Clone the repository**
+```bash
+git clone https://github.com/yourusername/prime-shoes-api.git
+cd prime-shoes-api
+```
+
+2️⃣ **Configure environment**
+```bash
+cp .env.example .env
+# Edit .env with your configurations
+```
+
+3️⃣ **Run the application**
+```bash
+./mvnw clean install
+./mvnw spring-boot:run
+```
+
+🎉 The API will be available at `http://localhost:8080`
 
 ## 🏗️ Project Architecture
 
-This project follows a clean, modular architecture organized by business domains.
+Our architecture follows clean code principles and domain-driven design practices.
 
-### Directory Structure
+### 📁 Directory Structure
 
 ```
 src/main/java/br/com/primeshoes/api/
-├── ApiApplication.java        # Application entry point
-├── common/                   # Shared components
-│   ├── config/              # Global configurations
-│   ├── exceptions/          # Exception handling
-│   ├── middleware/          # Application middleware
-│   ├── services/            # Shared services
-│   └── utils/               # Common utilities
-└── modules/                 # Domain modules
-    ├── address/             # Address management
-    ├── auth/                # Authentication and authorization
-    ├── cart/                # Shopping cart
-    ├── order/               # Order management
-    ├── payment/             # Payment processing
-    ├── product/             # Product catalog
-    ├── promotion/           # Promotion system
-    ├── review/              # Product reviews
-    ├── role/                # Role management
-    └── user/                # User management
+├── 📄 ApiApplication.java     # Application entry point
+├── 📂 common/                # Shared components
+│   ├── ⚙️ config/           # Global configurations
+│   ├── ❌ exceptions/       # Exception handling
+│   ├── 🔄 middleware/      # Application middleware
+│   ├── 🛠️ services/        # Shared services
+│   └── 🔧 utils/           # Common utilities
+└── 📂 modules/              # Domain modules
+    ├── 📍 address/         # Address management
+    ├── 🔐 auth/            # Authentication
+    ├── 🛒 cart/            # Shopping cart
+    ├── 📦 order/           # Order management
+    ├── 💳 payment/         # Payment processing
+    ├── 👕 product/         # Product catalog
+    ├── 🏷️ promotion/       # Promotion system
+    ├── ⭐ review/          # Product reviews
+    ├── 👥 role/            # Role management
+    └── 👤 user/            # User management
 ```
 
-## 📐 Architectural Patterns
+### 🏛️ Module Architecture
 
-### Modular Architecture
-The project is organized into independent modules, each representing a specific business domain. This approach provides:
+Each module follows a clean, layered architecture:
 
-- **Low Coupling**: Modules are independent and can be modified without affecting others
-- **High Cohesion**: Related functionalities are kept together
-- **Maintainability**: Facilitates code maintenance and evolution
+<div align="center">
 
-### Module Structure
-Each module follows a consistent structure with the following layers:
+```mermaid
+graph TD
+    A[Controller] --> B[Service]
+    B --> C[Repository]
+    B --> D[Mapper]
+    D --> E[DTO]
+    D --> F[Entity]
+    C --> F
+```
+
+</div>
+
+#### 📦 Module Structure
 
 ```
 module/
-├── Dto/            # Data Transfer Objects
-├── Entity/         # Domain entities and data models
-├── Mapper/         # DTO to Entity converters
-├── Repository/     # Data access layer
-├── Service/        # Business logic
-└── Controller      # REST API endpoints
+├── 📄 Dto/            # Data Transfer Objects
+├── 🎯 Entity/         # Domain entities
+├── 🔄 Mapper/         # Object mappers
+├── 💾 Repository/     # Data access
+├── ⚙️ Service/        # Business logic
+└── 🎮 Controller      # API endpoints
 ```
 
-#### Layers and Responsibilities
-
-- **Dto (Data Transfer Objects)**
-  - Data transfer between layers
-  - Input/Output validation
-  - API documentation (Swagger/OpenAPI)
-
-- **Entity**
-  - Domain models
-  - ORM mapping
-  - Persistence rules
-
-- **Mapper**
-  - DTO to Entity conversion
-  - Data transformation
-  - Object mapping
-
-- **Repository**
-  - Data access
-  - Database queries and operations
-  - Entity persistence
-
-- **Service**
-  - Business rules
-  - Operation orchestration
-  - Use case handling
-
-- **Controller**
-  - REST endpoints
-  - Request routing
-  - HTTP request handling
-
-### Common Layer
-The `common` folder contains reusable components:
-
-- **config/**: Global configurations
-- **exceptions/**: Centralized exception handling
-- **middleware/**: Interceptors and filters
-- **services/**: Shared services
-- **utils/**: Utility functions
-
-## 📊 Architecture Diagram
+## 📊 System Design
 
 ### UML Class Diagram
 ![Class Diagram](docs/images/image.png)
 
-The diagram above represents the complete system structure, showing:
-- Main entities and their attributes
-- Relationships between entities
-- Main methods of each class
-- Relationship cardinality
+<details>
+<summary>📝 Diagram Details</summary>
 
-The source code for the diagram in PlantUML format can be found at [docs/diagrams/architecture.puml](docs/diagrams/architecture.puml).
+- **Entities**: Core domain models with attributes
+- **Relationships**: Inter-entity connections
+- **Methods**: Key operations per class
+- **Cardinality**: Relationship multiplicities
 
-## 🔍 System Modules
+</details>
 
-### 1. Auth and Role
-- User authentication and authorization
-- Role-based access control
+## 🔍 Core Modules
 
-### 2. User and Address
-- User management
-- Address management
+| Module | Description | Key Features |
+|--------|-------------|--------------|
+| 🔐 **Auth** | Authentication & Authorization | JWT, RBAC |
+| 👤 **User** | User Management | Profiles, Addresses |
+| 👕 **Product** | Product Catalog | Categories, Stock |
+| 🛒 **Cart** | Shopping Cart | Items, Calculations |
+| 📦 **Order** | Order Processing | Tracking, History |
+| 💳 **Payment** | Payment Processing | Multiple Methods |
+| 🏷️ **Promotion** | Discount System | Rules, Campaigns |
 
-### 3. Product and Review
-- Product catalog
-- Review system
+## 📚 API Documentation
 
-### 4. Cart and Order
-- Shopping cart
-- Order management
+Access our interactive API documentation:
 
-### 5. Payment
-- Payment processing
-
-### 6. Promotion
-- Promotions and discounts system
-
-## 🚀 Getting Started
-
-### Requirements
-- Java 17+
-- Maven 3.8+
-- PostgreSQL
-
-### Installation
-1. Clone the repository
-2. Configure the required environment variables
-3. Run:
-   ```bash
-   ./mvnw clean install
-   ./mvnw spring-boot:run
-   ```
-
-### API Documentation
-Swagger UI available at:
 ```
-http://localhost:8080/swagger-ui.html
+💻 Development: http://localhost:8080/swagger-ui.html
+🌐 Production: https://api.primeshoes.com/docs
 ```
 
 ## 🤝 Contributing
 
-1. Fork the project
-2. Create a branch (`git checkout -b feature/NewFeature`)
-3. Commit your changes (`git commit -m 'Add NewFeature'`)
-4. Push to the branch (`git push origin feature/NewFeature`)
-5. Open a Pull Request
+We love your input! Check out our [Contributing Guide](CONTRIBUTING.md) for ways to get started.
+
+1. 🍴 Fork the project
+2. 🌱 Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. 💻 Code your changes
+4. 🔄 Commit (`git commit -m 'Add AmazingFeature'`)
+5. 📤 Push (`git push origin feature/AmazingFeature`)
+6. 🔍 Open a Pull Request
 
 ## 📝 License
 
-This project is under the [MIT](LICENSE) license. 
+This project is under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+Made with ❤️ by the Prime Shoes Team
+
+</div> 

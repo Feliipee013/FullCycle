@@ -60,7 +60,16 @@ A pasta `common` contém componentes reutilizáveis:
 
 ## 📊 Diagrama da Arquitetura
 
-O diagrama completo da arquitetura do sistema pode ser encontrado em [docs/diagrams/architecture.puml](docs/diagrams/architecture.puml).
+### Diagrama de Classes UML
+![Diagrama de Classes](docs/images/class-diagram.png)
+
+O diagrama acima representa a estrutura completa do sistema, mostrando:
+- Entidades principais e seus atributos
+- Relacionamentos entre as entidades
+- Métodos principais de cada classe
+- Cardinalidade das relações
+
+O código fonte do diagrama em formato PlantUML pode ser encontrado em [docs/diagrams/architecture.puml](docs/diagrams/architecture.puml).
 
 ## 🔍 Módulos do Sistema
 

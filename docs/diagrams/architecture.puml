@@ -1,0 +1,105 @@
+ @startuml PrimeShoesArchitecture
+
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+class User {
+    -Long id
+    -String email
+    -String password
+    -String name
+    -List<Role> roles
+    -List<Address> addresses
+    +authenticate()
+    +updateProfile()
+}
+
+class Role {
+    -Long id
+    -String name
+    -List<Permission> permissions
+}
+
+class Address {
+    -Long id
+    -String street
+    -String city
+    -String state
+    -String zipCode
+    -Boolean isDefault
+}
+
+class Product {
+    -Long id
+    -String name
+    -String description
+    -BigDecimal price
+    -Integer stock
+    -List<Review> reviews
+    +updateStock()
+    +applyPromotion()
+}
+
+class Review {
+    -Long id
+    -Integer rating
+    -String comment
+    -User user
+    -Product product
+}
+
+class Cart {
+    -Long id
+    -User user
+    -List<CartItem> items
+    -BigDecimal total
+    +addItem()
+    +removeItem()
+    +checkout()
+}
+
+class Order {
+    -Long id
+    -User user
+    -List<OrderItem> items
+    -OrderStatus status
+    -Payment payment
+    -Address shippingAddress
+    +processPayment()
+    +updateStatus()
+}
+
+class Payment {
+    -Long id
+    -BigDecimal amount
+    -PaymentStatus status
+    -PaymentMethod method
+    +process()
+    +refund()
+}
+
+class Promotion {
+    -Long id
+    -String code
+    -BigDecimal discount
+    -Date validUntil
+    -Boolean isActive
+    +apply()
+    +validate()
+}
+
+' Relacionamentos
+User "1" --> "*" Address : has
+User "1" --> "*" Role : has
+User "1" --> "*" Order : places
+User "1" --> "1" Cart : owns
+Product "1" --> "*" Review : has
+Cart "1" --> "*" Product : contains
+Order "1" --> "1" Payment : has
+Order "1" --> "*" Product : contains
+Product "1" --> "*" Promotion : has
+
+@enduml
